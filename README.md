@@ -4,7 +4,7 @@ Use multiple buildpacks on your app.
 
 ## Usage
 
-    $ heroku config:add BUILDPACK_URL=https://github.com/pivotal/cf-multi-buildpack.git
+Push your app with the argument `-b heroku config:add BUILDPACK_URL=https://github.com/pivotal/cf-multi-buildpack.git`
 
     $ cat .cfbuildpacks
     https://github.com/heroku/heroku-buildpack-nodejs.git#0198c71daa8
