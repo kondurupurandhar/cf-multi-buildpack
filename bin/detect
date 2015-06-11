@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
-if [ -f $1/.buildpacks ]; then
+if [ -f $1/.cfbuildpacks ]; then
   echo "Multipack"
   exit 0
 else
-  echo "no .buildpacks file"
+  echo "no .cfbuildpacks file"
   exit 1
 fi
