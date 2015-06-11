@@ -45,6 +45,7 @@ for BUILDPACK in $(cat $1/.cfbuildpacks); do
     # we'll get errors later if these are needed and don't exist
     chmod -f +x $dir/bin/{detect,compile,release} || true
 
+    echo #### "$dir/bin/detect $1"
     framework=$($dir/bin/detect $1)
     if [ $? == 0 ]; then
       echo "=====> Detected Framework: $framework"
