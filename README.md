@@ -4,7 +4,7 @@ Use multiple buildpacks on your app.
 
 ## Usage
 
-Push your app with the argument `-b https://github.com/fuigo/cf-multi-buildpack.git`
+Push your app with the argument `-b <github clone url>`
 
     $ cat .cfbuildpacks
     https://github.com/cloudfoundry/buildpack-ruby.git
