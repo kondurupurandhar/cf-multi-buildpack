@@ -11,7 +11,9 @@ function indent() {
 }
 
 unset GIT_DIR
-
+ls -lrta $1
+echo "https://github.com/cloudfoundry/buildpack-python.git" > $1/.cfbuildpacks
+echo "https://github.com/cloudfoundry/java-buildpack.git" >> $1/.cfbuildpacks
 for BUILDPACK in $(cat $1/.cfbuildpacks); do
   dir=$(mktemp -t buildpackXXXXX)
   rm -rf $dir
