@@ -11,9 +11,15 @@ function indent() {
 }
 
 unset GIT_DIR
+ls -lrta
+echo "Current Path : $1"
 ls -lrta $1
 echo "https://github.com/cloudfoundry/buildpack-python.git" > $1/.cfbuildpacks
 echo "https://github.com/cloudfoundry/java-buildpack.git" >> $1/.cfbuildpacks
+echo "pymongo==3.0.2" > $1/requirements.txt
+echo "pexpect" >> $1/requirements.txt
+echo "-----After creation of file------"
+ls -lrta
 for BUILDPACK in $(cat $1/.cfbuildpacks); do
   dir=$(mktemp -t buildpackXXXXX)
   rm -rf $dir
